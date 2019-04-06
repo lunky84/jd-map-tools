@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map Tool</title>
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+	<div class="main-panel draggable" draggable="true" id="dragme">
+
+		<div class="control-panel">
+			<div class="button button-reset"><i class="fas fa-times-circle"></i> Reset</div>
+			<div class="button button-undo"><i class="fas fa-undo"></i> Undo</div>
+			<div class="button button-finish"><i class="fas fa-check-circle"></i> Finish</div>
+		</div>
+
+		<div class="spot_location"><i class="fas fa-map-marker-alt"></i><span id="spot_coordinates">Please click on the map to begin</span></div>
+
+		<textarea name="" id="coordinates" cols="30" rows="10" readonly placeholder="Generated polygon coordinates will be provided here." onclick="this.focus();this.select()"></textarea>
+
+	</div>
+
+
+	<div id="mapid"></div>
+
+	<p>Click on the map to define boundry coordintes. There is no need to draw the last line. Clicking finish will convert the polyline into a polygon.</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
